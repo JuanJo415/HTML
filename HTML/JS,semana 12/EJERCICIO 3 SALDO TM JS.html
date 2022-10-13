@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TARGETA TU LLAVE TM</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <img src="/JS,semana 12/IMG/logo TM.png" width="150" height="150" alt="">
+        <h1>SALDO DE TARGETA TU LLAVE TM</h1>
+        <script>
+            // entrada
+            var saldo=0;
+            const tm=2650;
+            saldo= parseInt(prompt("INGRESE SALDO DE TARGETA TM"));
+            //proceso
+             if( saldo >= tm )
+            {
+                swal("SEÑOR USUARIO", "INGRESA A SISTEMA TRANSMILENIO", "success");
+            }
+             else
+            {
+                swal("SEÑOR USUARIO","RECARGUE TARGETA TRANSMILENIO.. SALDO INSUFICIENTE","error");
+            }
+            </script>
+    </center>
+</body>
+</html>
