@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>CONTRASEÑA CICLO FOR</title>
+</head>
+<body>
+    <center>
+        <h1>CICLO FOR IF CONTRASEÑA</h1>
+            <h3>Validacion de ingreso</h3>
+            <script>
+                let datof;
+                let sw=0;//var tipo switche apagado
+                let clave=123;
+                //
+                for(f=1;f<=3;f++)
+                {
+                    datof=parseInt(prompt("Ingrese contraseña de ingreso"));
+                    if (datof==clave){
+                        swal("usuario", "acceso permitido","success");
+                        document.write("ACCESS GRANTED");
+                        sw=1;//switche prendido
+                        break;
+                    }
+                }
+                if (sw==0){
+                    swal("usuario","acceso bloqueado","error");
+                }
+            </script>
+    </center>
+</body>
+</html>
