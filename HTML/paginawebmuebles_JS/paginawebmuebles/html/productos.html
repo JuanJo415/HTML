@@ -1,0 +1,191 @@
+<HTML>
+
+  <HEAD>
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1" /> 
+  <TITLE> Productos </TITLE>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+<link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />
+  <script src="../js/scripts.js"></script> 
+  <script src="../js/yetii-min.js"></script> 
+  <script src="../js/slider.js"></script> 
+  </HEAD> 
+  <BODY>
+
+    <div class="d-flex" id="wrapper">
+      <div class="border-end" id="sidebar-wrapper">
+        <h1 style="font-family: regular;">Menu</h1>
+        <div class="list-group list-group-flush">
+            <a style="font-family: regular;" class="list-group-item list-group-item-action list-group-item-light p-3" href="../index.html">Home</a>
+            <a style="font-family: regular;" class="list-group-item list-group-item-action list-group-item-light p-3" href="productos.html">Productos</a>
+            <a style="font-family: regular;" class="list-group-item list-group-item-action list-group-item-light p-3" href="contactenos.html">Contacto</a>          
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light"> 
+      <img src="../images/logo.png" alt="Italian Trulli" width="58" height="58">   
+      <button type="button" class="btn btn-outline-dark" id="sidebarToggle">Menu</button>  
+                 
+    </nav>   
+
+
+ 
+
+
+<div id="titulo2" >
+  <h3 style="font-family: regular; text-align: center;"> Nuestros productos </h3>
+</div>
+
+<div class="container">
+  <div class="mySlides">
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+    <div class="numbertext">1 / 6</div>
+    <img src="../images/camaslider1.jpg" style="width:100%">
+    <a href="camas.html" style="color: white;">
+      <strong href="/html/camas.html" style="font-family: regular;">Ver</strong> 
+    </a> 
+  </div>
+
+  <div class="mySlides">
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+    <div class="numbertext">2 / 6</div>
+    <img src="../images/2.jpg" style="width:100%">
+    <a href="sofas.html" style="color: white;">
+      <strong href="/html/sofas.html" style="font-family: regular;">Ver</strong> 
+    </a> 
+  </div>
+
+  <div class="mySlides">
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+    <div class="numbertext">3 / 6</div>
+    <img src="../images/mesaslider1.jpg" style="width:100%">
+    <a href="mesas.html" style="color: white;">
+      <strong href="/html/mesas.html" style="font-family: regular;">Ver</strong> 
+    </a> 
+  </div>
+    
+  <div class="mySlides">
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+    <div class="numbertext">4 / 6</div>
+    <img src="../images/exterioreslider1.jpg" style="width:100%">
+    <a href="exteriores.html" style="color: white;">
+      <strong href="/html/exteriores.html" style="font-family: regular;">Ver</strong> 
+    </a> 
+  </div>
+    
+  
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row" style="text-align: center; font-family: regular;">
+    <div class="column">
+      <img class="demo cursor" src="../images/camaslider1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Camas">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../images/2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Sofas">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../images/mesaslider1.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mesas">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../images/exterioreslider1.jpg" style="width:100%" onclick="currentSlide(4)" alt="Exteriores">
+    </div>
+  </div>
+</div>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+  </script>
+
+
+  <div id="tituloescogernos">
+    <h3 style="font-family: regular; text-align: left; padding-left: 1%;"> Tambien pregunta por nuestro servicio de diseño de interiores </h3>
+  </div>
+
+  <div id="separador">
+    <div id="fila">
+
+
+
+      <div id="columna2">
+        <img id="imagensomos" src="../images/diseñoint.jpg" alt="MDN">
+      </div>
+
+      <div id="columna">
+        <img id="imagensomos" src="../images/diseñoint2.jpg" alt="MDN">
+      </div>
+
+
+      
+
+      
+    </div>
+  </div>  
+
+
+  </BODY>
+
+  <footer id="footer" class="clearfix" style="text-align: center;">
+    <img src="../images/logo.png" alt="Italian Trulli" width="174" height="174" style="background-color: rgb(220, 220, 220); border-radius: 50px; box-shadow: 3px 3px 5px 0px #131313;">
+        <br><br>
+        <h4 style="font-family: regular; color: black;">Redes Sociales:</h4>
+
+        <a href="https://www.facebook.com/jenospizza/" target="_blank"  style="font-family: normal; color: black;"><i class="fa fa-facebook"></i> Facebook</a>
+        
+        <img src="../images/facebook.png" alt="Italian Trulli" width="60" height="60">
+
+
+
+        <a href="https://www.instagram.com/jenospizza/?hl=es-la" target="_blank"  style="font-family: normal; color: black;"><i class="fa fa-twitter"></i> Instagram</a>
+        
+        <img src="../images/instagram.png" alt="Italian Trulli" width="60" height="60">
+
+        <a href="https://www.youtube.com/user/CanalJenosPizza" target="_blank"  style="font-family: normal; color: black;"><i class="fa fa-youtube"></i> Youtube</a>
+        
+        <img src="../images/youtube.png" alt="Italian Trulli" width="60" height="60">
+        <br><br>
+        
+        © 2021 Todos los derechos reservados.
+
+  </footer>
+
+</HTML>
